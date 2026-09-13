@@ -1,0 +1,47 @@
+{
+    "name": "SMS",
+    "slug": "sms",
+    "version": "0.1.0",
+    "author": "Onidesk",
+    "description": "Envio de SMS via API EZ4U com templates dinâmicos",
+    "namespace": "Beaver\\Plugins\\Sms",
+    "main": "src/SmsPlugin.php",
+    "beaver_version": ">=0.1.0",
+    "requires": {
+        "php": ">=8.1",
+        "extensions": [
+            "curl",
+            "json"
+        ]
+    },
+    "permissions": {
+        "filesystem": {
+            "read": [
+                "storage/",
+                "config/",
+                "resources/"
+            ],
+            "write": [
+                "storage/logs/",
+                "storage/tmp/"
+            ]
+        },
+        "network": {
+            "outbound": [
+                {
+                    "host": "dashboard.ez4uteam.com",
+                    "port": 443,
+                    "protocol": "https"
+                }
+            ]
+        }
+    },
+    "admin_menu": {
+        "label": "SMS",
+        "icon": "fa-comment-sms"
+    },
+    "hooks": [
+        "record.render_actions"
+    ],
+    "routes": "routes/web.php"
+}

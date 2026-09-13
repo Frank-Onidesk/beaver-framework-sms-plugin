@@ -1,0 +1,27 @@
+# Dependências do Composer (regeneradas com `composer install`)
+/vendor/
+
+# Credenciais locais (nunca versionar)
+/.env
+/.env.local
+
+# Ficheiros de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*~
+# Chaves SSH ou ficheiros acidentais
+*.pub
+id_ed25519
+id_ed25519.pub
+beaver-plugin.txt
+beaver-plugin.txt.pub
+
+# Backups locais
+*.bak
+*.bak-*
+*.backup
+*~
+
+# Windows Zone.Identifier (metadata de ficheiros copiados do Windows)
+*:Zone.Identifier
